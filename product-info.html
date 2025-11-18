@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心岛 MindHaven - 您的专属冥想空间</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        .feature-icon {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        }
+    </style>
+</head>
+<body class="smooth-scroll bg-gradient-to-br from-blue-50 to-purple-50">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center">
+                    <span class="text-white text-xl">🧘</span>
+                </div>
+                <h1 class="text-xl gradient-text" data-zh="心岛 MindHaven" data-en="MindHaven">心岛 MindHaven</h1>
+            </div>
+            
+            <div class="flex items-center space-x-6">
+                <a href="#features" class="text-gray-700 hover:text-purple-600 transition" data-zh="功能特色" data-en="Features">功能特色</a>
+                <a href="#support" class="text-gray-700 hover:text-purple-600 transition" data-zh="产品支持" data-en="Support">产品支持</a>
+                <button id="langToggle" class="px-4 py-2 rounded-lg bg-purple-100 text-purple-700 hover:bg-purple-200 transition">
+                    EN
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="container mx-auto text-center max-w-4xl">
+            <div class="mb-8">
+                <div class="w-24 h-24 gradient-bg rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                    <span class="text-5xl">🧘</span>
+                </div>
+                <h2 class="text-5xl mb-6 gradient-text" data-zh="心岛 MindHaven" data-en="MindHaven">心岛 MindHaven</h2>
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed" data-zh="您的专属冥想空间，在喧嚣中找到内心的宁静" data-en="Your Personal Meditation Space, Finding Inner Peace in the Chaos">您的专属冥想空间，在喧嚣中找到内心的宁静</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="px-6 py-3 bg-white rounded-xl shadow-md">
+                    <div class="text-2xl gradient-text">18+</div>
+                    <div class="text-sm text-gray-600" data-zh="环境声景" data-en="Soundscapes">环境声景</div>
+                </div>
+                <div class="px-6 py-3 bg-white rounded-xl shadow-md">
+                    <div class="text-2xl gradient-text">6+</div>
+                    <div class="text-sm text-gray-600" data-zh="冥想场景" data-en="Meditation Sessions">冥想场景</div>
+                </div>
+                <div class="px-6 py-3 bg-white rounded-xl shadow-md">
+                    <div class="text-2xl gradient-text">100%</div>
+                    <div class="text-sm text-gray-600" data-zh="免费使用" data-en="Free to Use">免费使用</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Introduction -->
+    <section class="py-20 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl mb-4 gradient-text" data-zh="产品简介" data-en="About MindHaven">产品简介</h3>
+                <p class="text-gray-600 max-w-3xl mx-auto leading-relaxed" 
+                   data-zh="心岛 MindHaven 是一款轻量级冥想应用，专为忙碌的都市人打造。我们相信，每个人都值得拥有一个内心的宁静岛屿。无论是工作间隙的短暂放松，还是睡前的深度冥想，心岛都能陪伴您找到最适合的节奏。"
+                   data-en="MindHaven is a lightweight meditation app designed for busy urban dwellers. We believe everyone deserves an island of inner peace. Whether it's a quick break during work or deep meditation before sleep, MindHaven helps you find your perfect rhythm.">
+                    心岛 MindHaven 是一款轻量级冥想应用，专为忙碌的都市人打造。我们相信，每个人都值得拥有一个内心的宁静岛屿。无论是工作间隙的短暂放松，还是睡前的深度冥想，心岛都能陪伴您找到最适合的节奏。
+                </p>
+            </div>
+
+            <!-- Target Users -->
+            <div class="mb-16">
+                <h4 class="text-2xl text-center mb-8 text-gray-800" data-zh="适用人群" data-en="Who It's For">适用人群</h4>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl card-hover">
+                        <div class="text-4xl mb-4">💼</div>
+                        <h5 class="text-lg mb-2 text-gray-800" data-zh="都市白领" data-en="Urban Professionals">都市白领</h5>
+                        <p class="text-gray-600 text-sm leading-relaxed" 
+                           data-zh="缓解工作压力，提升专注力，在忙碌中找到平衡"
+                           data-en="Reduce work stress, improve focus, and find balance in the hustle">
+                            缓解工作压力，提升专注力，在忙碌中找到平衡
+                        </p>
+                    </div>
+                    <div class="p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl card-hover">
+                        <div class="text-4xl mb-4">📚</div>
+                        <h5 class="text-lg mb-2 text-gray-800" data-zh="学生群体" data-en="Students">学生群体</h5>
+                        <p class="text-gray-600 text-sm leading-relaxed"
+                           data-zh="改善睡眠质量，管理考试焦虑，培养专注习惯"
+                           data-en="Improve sleep quality, manage exam anxiety, and build focus habits">
+                            改善睡眠质量，管理考试焦虑，培养专注习惯
+                        </p>
+                    </div>
+                    <div class="p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl card-hover">
+                        <div class="text-4xl mb-4">🎨</div>
+                        <h5 class="text-lg mb-2 text-gray-800" data-zh="创作者" data-en="Creators">创作者</h5>
+                        <p class="text-gray-600 text-sm leading-relaxed"
+                           data-zh="激发创造力，保持心流状态，寻找灵感源泉"
+                           data-en="Spark creativity, maintain flow state, and find inspiration">
+                            激发创造力，保持心流状态，寻找灵感源泉
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl mb-4 gradient-text" data-zh="功能特色" data-en="Key Features">功能特色</h3>
+                <p class="text-gray-600" data-zh="五大核心模块，满足您的全方位冥想需求" data-en="Five core modules for your comprehensive meditation needs">五大核心模块，满足您的全方位冥想需求</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="feature-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+                        <span class="text-3xl">🏠</span>
+                    </div>
+                    <h5 class="text-xl mb-3 text-gray-800" data-zh="智能首页" data-en="Smart Home">智能首页</h5>
+                    <p class="text-gray-600 text-sm leading-relaxed"
+                       data-zh="每日激励语、情绪记录、快速冥想入口，让您的每一天从心岛开始"
+                       data-en="Daily inspiration, mood tracking, and quick meditation access to start your day right">
+                        每日激励语、情绪记录、快速冥想入口，让您的每一天从心岛开始
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="feature-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+                        <span class="text-3xl">🧘</span>
+                    </div>
+                    <h5 class="text-xl mb-3 text-gray-800" data-zh="场景化冥想" data-en="Scenario Meditation">场景化冥想</h5>
+                    <p class="text-gray-600 text-sm leading-relaxed"
+                       data-zh="6种精心设计的冥想场景：专注、放松、助眠、创造力、情绪管理、正念呼吸"
+                       data-en="6 carefully designed sessions: Focus, Relax, Sleep, Creativity, Emotion Management, Mindful Breathing">
+                        6种精心设计的冥想场景：专注、放松、助眠、创造力、情绪管理、正念呼吸
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="feature-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+                        <span class="text-3xl">🎵</span>
+                    </div>
+                    <h5 class="text-xl mb-3 text-gray-800" data-zh="音景馆" data-en="Soundscape Gallery">音景馆</h5>
+                    <p class="text-gray-600 text-sm leading-relaxed"
+                       data-zh="18种自然声景，采用Web Audio API实时生成，每次聆听都是独特体验"
+                       data-en="18 nature soundscapes, generated in real-time with Web Audio API for a unique experience every time">
+                        18种自然声景，采用Web Audio API实时生成，每次聆听都是独特体验
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="feature-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+                        <span class="text-3xl">📅</span>
+                    </div>
+                    <h5 class="text-xl mb-3 text-gray-800" data-zh="日历统计" data-en="Calendar Stats">日历统计</h5>
+                    <p class="text-gray-600 text-sm leading-relaxed"
+                       data-zh="可视化您的冥想历程，追踪连续打卡天数，见证自己的成长"
+                       data-en="Visualize your meditation journey, track consecutive days, and witness your growth">
+                        可视化您的冥想历程，追踪连续打卡天数，见证自己的成长
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="feature-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+                        <span class="text-3xl">👥</span>
+                    </div>
+                    <h5 class="text-xl mb-3 text-gray-800" data-zh="社区分享" data-en="Community">社区分享</h5>
+                    <p class="text-gray-600 text-sm leading-relaxed"
+                       data-zh="分享冥想体验，添加好友，互相激励，在心岛社区找到志同道合的伙伴"
+                       data-en="Share experiences, add friends, encourage each other, and find like-minded companions">
+                        分享冥想体验，添加好友，互相激励，在心岛社区找到志同道合的伙伴
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="feature-icon w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+                        <span class="text-3xl">☁️</span>
+                    </div>
+                    <h5 class="text-xl mb-3 text-gray-800" data-zh="云端同步" data-en="Cloud Sync">云端同步</h5>
+                    <p class="text-gray-600 text-sm leading-relaxed"
+                       data-zh="Supabase实时同步，多设备无缝切换，您的冥想数据永不丢失"
+                       data-en="Real-time Supabase sync, seamless multi-device switching, your data is always safe">
+                        Supabase实时同步，多设备无缝切换，您的冥想数据永不丢失
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Highlights -->
+    <section class="py-20 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl mb-4 gradient-text" data-zh="技术亮点" data-en="Technical Highlights">技术亮点</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-6 border-2 border-purple-100 rounded-2xl">
+                    <div class="flex items-start space-x-4">
+                        <div class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl">🎨</span>
+                        </div>
+                        <div>
+                            <h5 class="text-lg mb-2 text-gray-800" data-zh="现代化技术栈" data-en="Modern Tech Stack">现代化技术栈</h5>
+                            <p class="text-gray-600 text-sm"
+                               data-zh="React + TypeScript + Tailwind CSS + shadcn/ui，保证流畅体验和代码质量"
+                               data-en="React + TypeScript + Tailwind CSS + shadcn/ui for smooth experience and code quality">
+                                React + TypeScript + Tailwind CSS + shadcn/ui，保证流畅体验和代码质量
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 border-2 border-purple-100 rounded-2xl">
+                    <div class="flex items-start space-x-4">
+                        <div class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl">🎼</span>
+                        </div>
+                        <div>
+                            <h5 class="text-lg mb-2 text-gray-800" data-zh="Web Audio API" data-en="Web Audio API">Web Audio API</h5>
+                            <p class="text-gray-600 text-sm"
+                               data-zh="实时生成高品质自然声景，无需下载音频文件，节省空间"
+                               data-en="Real-time generation of high-quality nature soundscapes, no audio files needed">
+                                实时生成高品质自然声景，无需下载音频文件，节省空间
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 border-2 border-purple-100 rounded-2xl">
+                    <div class="flex items-start space-x-4">
+                        <div class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl">📱</span>
+                        </div>
+                        <div>
+                            <h5 class="text-lg mb-2 text-gray-800" data-zh="PWA支持" data-en="PWA Support">PWA支持</h5>
+                            <p class="text-gray-600 text-sm"
+                               data-zh="可添加到主屏幕，像原生应用一样使用，支持离线访问"
+                               data-en="Add to home screen, use like a native app, with offline support">
+                                可添加到主屏幕，像原生应用一样使用，支持离线访问
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 border-2 border-purple-100 rounded-2xl">
+                    <div class="flex items-start space-x-4">
+                        <div class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="text-2xl">🌓</span>
+                        </div>
+                        <div>
+                            <h5 class="text-lg mb-2 text-gray-800" data-zh="深色模式" data-en="Dark Mode">深色模式</h5>
+                            <p class="text-gray-600 text-sm"
+                               data-zh="自动适应系统主题，夜间使用更舒适，保护视力"
+                               data-en="Auto-adapts to system theme, more comfortable at night, protects vision">
+                                自动适应系统主题，夜间使用更舒适，保护视力
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="py-20 px-4 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl mb-4 gradient-text" data-zh="产品支持" data-en="Product Support">产品支持</h3>
+                <p class="text-gray-600" data-zh="我们随时准备帮助您" data-en="We're here to help">我们随时准备帮助您</p>
+            </div>
+
+            <!-- FAQ -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+                <h4 class="text-2xl mb-8 text-gray-800" data-zh="常见问题" data-en="FAQ">常见问题</h4>
+                
+                <div class="space-y-6">
+                    <!-- FAQ 1 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <h5 class="text-lg mb-2 text-gray-800" data-zh="Q: 心岛是免费的吗？" data-en="Q: Is MindHaven free?">Q: 心岛是免费的吗？</h5>
+                        <p class="text-gray-600 pl-6"
+                           data-zh="A: 是的，心岛完全免费，所有功能都可以无限制使用，无需付费解锁。"
+                           data-en="A: Yes, MindHaven is completely free. All features are available without any payment.">
+                            A: 是的，心岛完全免费，所有功能都可以无限制使用，无需付费解锁。
+                        </p>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <h5 class="text-lg mb-2 text-gray-800" data-zh="Q: 需要注册账号吗？" data-en="Q: Do I need to register?">Q: 需要注册账号吗？</h5>
+                        <p class="text-gray-600 pl-6"
+                           data-zh="A: 需要注册账号才能使用云端同步、社区分享等功能。注册过程简单快捷，支持邮箱注册和社交账号登录。"
+                           data-en="A: Registration is required for cloud sync and community features. The process is quick and supports email and social login.">
+                            A: 需要注册账号才能使用云端同步、社区分享等功能。注册过程简单快捷，支持邮箱注册和社交账号登录。
+                        </p>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <h5 class="text-lg mb-2 text-gray-800" data-zh="Q: 数据会保存在哪里？" data-en="Q: Where is my data stored?">Q: 数据会保存在哪里？</h5>
+                        <p class="text-gray-600 pl-6"
+                           data-zh="A: 您的数据会自动实时同步到Supabase云端，同时也会在本地存储备份。即使离线，您也可以继续使用应用，数据会在联网后自动同步。"
+                           data-en="A: Your data is automatically synced to Supabase cloud in real-time, with local backup. You can use the app offline, and data syncs when you reconnect.">
+                            A: 您的数据会自动实时同步到Supabase云端，同时也会在本地存储备份。即使离线，您也可以继续使用应用，数据会在联网后自动同步。
+                        </p>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <h5 class="text-lg mb-2 text-gray-800" data-zh="Q: 声景是如何生成的？" data-en="Q: How are soundscapes generated?">Q: 声景是如何生成的？</h5>
+                        <p class="text-gray-600 pl-6"
+                           data-zh="A: 我们使用Web Audio API技术实时生成自然声景，这意味着每次聆听都会有细微差别，就像真实的自然环境一样。这也让应用体积更小，无需下载大量音频文件。"
+                           data-en="A: We use Web Audio API to generate soundscapes in real-time, meaning each listening experience is slightly different, just like real nature. This also keeps the app lightweight.">
+                            A: 我们使用Web Audio API技术实时生成自然声景，这意味着每次聆听都会有细微差别，就像真实的自然环境一样。这也让应用体积更小，无需下载大量音频文件。
+                        </p>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <h5 class="text-lg mb-2 text-gray-800" data-zh="Q: 可以在多个设备上使用吗？" data-en="Q: Can I use it on multiple devices?">Q: 可以在多个设备上使用吗？</h5>
+                        <p class="text-gray-600 pl-6"
+                           data-zh="A: 可以！登录同一账号后，您的所有数据（冥想记录、情绪日志、偏好设置等）会自动在所有设备间同步。"
+                           data-en="A: Yes! After logging in, all your data (meditation records, mood logs, preferences) syncs automatically across all devices.">
+                            A: 可以！登录同一账号后，您的所有数据（冥想记录、情绪日志、偏好设置等）会自动在所有设备间同步。
+                        </p>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <h5 class="text-lg mb-2 text-gray-800" data-zh="Q: 如何添加到主屏幕？" data-en="Q: How to add to home screen?">Q: 如何添加到主屏幕？</h5>
+                        <p class="text-gray-600 pl-6"
+                           data-zh="A: 在手机浏览器中打开心岛，点击浏览器菜单中的"添加到主屏幕"选项。添加后，心岛会像原生应用一样显示在您的主屏幕上。"
+                           data-en="A: Open MindHaven in your mobile browser and tap 'Add to Home Screen' in the browser menu. It will appear on your home screen like a native app.">
+                            A: 在手机浏览器中打开心岛，点击浏览器菜单中的"添加到主屏幕"选项。添加后，心岛会像原生应用一样显示在您的主屏幕上。
+                        </p>
+                    </div>
+
+                    <!-- FAQ 7 -->
+                    <div class="pb-6">
+                        <h5 class="text-lg mb-2 text-gray-800" data-zh="Q: 如何重置密码？" data-en="Q: How to reset password?">Q: 如何重置密码？</h5>
+                        <p class="text-gray-600 pl-6"
+                           data-zh="A: 在登录页面点击"忘记密码"，通过安全问题验证后即可重置密码。如果忘记安全问题答案，请联系我们的支持团队。"
+                           data-en="A: Click 'Forgot Password' on the login page, verify your security question, and reset your password. Contact support if you forget your security answer.">
+                            A: 在登录页面点击"忘记密码"，通过安全问题验证后即可重置密码。如果忘记安全问题答案，请联系我们的支持团队。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h4 class="text-2xl mb-6 text-gray-800" data-zh="联系我们" data-en="Contact Us">联系我们</h4>
+                <p class="text-gray-600 mb-6 leading-relaxed"
+                   data-zh="如果您有任何问题、建议或反馈，欢迎随时联系我们。我们会在24小时内回复您的消息。"
+                   data-en="If you have any questions, suggestions, or feedback, feel free to contact us. We'll respond within 24 hours.">
+                    如果您有任何问题、建议或反馈，欢迎随时联系我们。我们会在24小时内回复您的消息。
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex items-start space-x-4 p-4 bg-purple-50 rounded-xl">
+                        <div class="text-2xl">📧</div>
+                        <div>
+                            <h5 class="mb-1 text-gray-800" data-zh="邮箱支持" data-en="Email Support">邮箱支持</h5>
+                            <a href="mailto:fearless.heart.wang@gmail.com" class="text-purple-600 hover:text-purple-700">
+                                fearless.heart.wang@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4 p-4 bg-purple-50 rounded-xl">
+                        <div class="text-2xl">💬</div>
+                        <div>
+                            <h5 class="mb-1 text-gray-800" data-zh="社区反馈" data-en="Community Feedback">社区反馈</h5>
+                            <p class="text-gray-600 text-sm" data-zh="在应用内的社区页面留言" data-en="Leave a message in the app's community page">在应用内的社区页面留言</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border-2 border-purple-100">
+                    <div class="flex items-start space-x-3">
+                        <span class="text-2xl">💡</span>
+                        <div>
+                            <h5 class="mb-2 text-gray-800" data-zh="功能建议" data-en="Feature Requests">功能建议</h5>
+                            <p class="text-gray-600 text-sm leading-relaxed"
+                               data-zh="我们重视每一位用户的声音。如果您有好的想法或功能建议，请随时告诉我们。您的反馈将帮助我们打造更好的冥想体验。"
+                               data-en="We value every user's voice. If you have ideas or feature requests, please let us know. Your feedback helps us create a better meditation experience.">
+                                我们重视每一位用户的声音。如果您有好的想法或功能建议，请随时告诉我们。您的反馈将帮助我们打造更好的冥想体验。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy & Terms -->
+    <section class="py-20 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-8 border-2 border-purple-100 rounded-2xl">
+                    <h4 class="text-2xl mb-4 gradient-text" data-zh="隐私保护" data-en="Privacy Protection">隐私保护</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="mr-2">✓</span>
+                            <span data-zh="我们不会收集您的个人敏感信息" data-en="We don't collect your personal sensitive information">我们不会收集您的个人敏感信息</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">✓</span>
+                            <span data-zh="所有数据传输均经过加密处理" data-en="All data transmission is encrypted">所有数据传输均经过加密处理</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">✓</span>
+                            <span data-zh="您可以随时导出或删除自己的数据" data-en="You can export or delete your data at any time">您可以随时导出或删除自己的数据</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">✓</span>
+                            <span data-zh="我们不会将您的数据分享给第三方" data-en="We don't share your data with third parties">我们不会将您的数据分享给第三方</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="p-8 border-2 border-purple-100 rounded-2xl">
+                    <h4 class="text-2xl mb-4 gradient-text" data-zh="使用条款" data-en="Terms of Use">使用条款</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="mr-2">✓</span>
+                            <span data-zh="请合理使用应用，不要恶意刷数据" data-en="Please use the app reasonably, don't abuse the system">请合理使用应用，不要恶意刷数据</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">✓</span>
+                            <span data-zh="在社区中保持友善，尊重他人" data-en="Be kind and respectful in the community">在社区中保持友善，尊重他人</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">✓</span>
+                            <span data-zh="不要发布违法、暴力或不当内容" data-en="Don't post illegal, violent, or inappropriate content">不要发布违法、暴力或不当内容</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">✓</span>
+                            <span data-zh="我们保留更新条款的权利" data-en="We reserve the right to update these terms">我们保留更新条款的权利</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                        <span class="text-2xl">🧘</span>
+                    </div>
+                    <h1 class="text-2xl" data-zh="心岛 MindHaven" data-en="MindHaven">心岛 MindHaven</h1>
+                </div>
+                <p class="text-white/80 mb-6" 
+                   data-zh="在喧嚣中，为自己保留一片宁静之地" 
+                   data-en="In the chaos, keep a place of peace for yourself">
+                    在喧嚣中，为自己保留一片宁静之地
+                </p>
+                <p class="text-white/60 text-sm">
+                    © 2025 MindHaven. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle
+        const langToggle = document.getElementById('langToggle');
+        let currentLang = 'zh';
+
+        // Get saved language preference
+        const savedLang = localStorage.getItem('mindhaven-lang') || 'zh';
+        currentLang = savedLang;
+        updateLanguage(currentLang);
+
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            localStorage.setItem('mindhaven-lang', currentLang);
+            updateLanguage(currentLang);
+        });
+
+        function updateLanguage(lang) {
+            const elements = document.querySelectorAll('[data-zh][data-en]');
+            elements.forEach(el => {
+                if (lang === 'zh') {
+                    el.textContent = el.getAttribute('data-zh');
+                } else {
+                    el.textContent = el.getAttribute('data-en');
+                }
+            });
+
+            // Update button text
+            langToggle.textContent = lang === 'zh' ? 'EN' : '中文';
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang === 'zh' ? 'zh' : 'en';
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const header = document.querySelector('header');
+            
+            if (currentScroll > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(102, 126, 234, 0.1)';
+            } else {
+                header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
+
